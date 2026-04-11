@@ -1,0 +1,17 @@
+# 依存パッケージ
+node_modules
+
+# ビルド成果物
+dist
+
+# 環境変数（SupabaseのURLとAPIキーを含むため必ずGit管理から除外）
+.env
+.env.local
+.env.*.local
+
+# OS・エディタ生成ファイル
+.DS_Store
+Thumbs.db
+
+# Viteキャッシュ
+.vite
