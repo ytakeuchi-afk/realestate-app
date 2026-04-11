@@ -76,11 +76,18 @@
   padding: 32px 24px;
 }
 
+/* ページヘッダー：タイトル左・新規登録ボタン右 */
 .header {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 24px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }
 
 .heading {
@@ -110,7 +117,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e8f0;
   transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
 }
 
 .card:hover {
@@ -184,4 +190,103 @@
   font-size: 22px;
   font-weight: 700;
   color: #2d3748;
+}
+
+/* 編集・削除ボタン行 */
+.cardActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* 編集ボタン */
+.editButton {
+  flex: 1;
+  padding: 7px 0;
+  background: white;
+  color: #4299e1;
+  border: 1px solid #4299e1;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editButton:hover {
+  background: #ebf8ff;
+}
+
+/* 削除ボタン */
+.deleteButton {
+  flex: 1;
+  padding: 7px 0;
+  background: white;
+  color: #e53e3e;
+  border: 1px solid #e53e3e;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background: #fff5f5;
+}
+
+/* 新規登録ボタン（ヘッダー右） */
+.addButton {
+  padding: 10px 20px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.addButton:hover {
+  background: #3182ce;
+}
+
+/* 状態表示テキスト（読み込み中など） */
+.stateText {
+  color: #718096;
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* エラーメッセージ */
+.errorMessage {
+  color: #c53030;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+/* 物件0件時の空状態 */
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.emptyText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.emptyHint {
+  font-size: 13px;
+  color: #a0aec0;
 }
